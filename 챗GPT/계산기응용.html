@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>할인 가격 프로그램</title>
+    <style>
+        #contents {
+            width: 450px;
+            margin: 0 auto;
+        }
+
+        #contents img {
+            float: left;
+            margin-right: 25px;
+        }
+
+        ul {
+            list-style: none;
+            padding-top: 40px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        li label {
+            width: 80px;
+            float: left;
+            text-align: right;
+        }
+
+        input[type="text"] {
+            width: 110px;
+            padding: 5px 10px;
+            margin: 0 5px 0 10px;
+        }
+
+        button {
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+        }
+
+        #showresult {
+            margin-top: 20px;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <div id="contents">
+        <img src="sale.png" width="150">
+        <ul>
+            <li>
+                <label for="originalprice">원래 가격</label>
+                <input type="text" id="originalprice">원
+            </li>
+            <li>
+                <label for="rate">할인율</label>
+                <input type="text" id="rate">%
+            </li>
+            <li>
+                <button onclick="showprice()">할인가격 계산하기</button>
+            </li>
+        </ul>
+        <div id="showresult"></div>
+    </div>
+    <script>
+        function showprice() {
+            var Oprice = document.querySelector("#originalprice").value;
+            var rate = document.querySelector("#rate").value;
+            if (Oprice > 0 && rate >= 0) {
+                var savedprice = Oprice * (rate / 100);
+                var resultprice = Oprice - savedprice;
+                if (resultprice < Oprice) {
+                    document.querySelector("#showresult").innerHTML = "할인된 가격이 원래 가격보다 작습니다. 올바른 값을 입력해주세요.";
+                } else {
+                    document.querySelector("#showresult").innerHTML = "상품의 원래 가격은 " + Oprice + "원이고, 할인율은 " + rate + "%입니다. 따라서 " + savedprice + "원을 절약한 " + resultprice + "원에 살 수 있습니다.";
+                }
+            } else {
+                document.querySelector("#showresult").innerHTML = "올바른 값을 입력해주세요.";
+            }
+        }
+    </script>
+</body>
+</html>

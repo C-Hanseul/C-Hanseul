@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>switch 조건문</title>
+</head>
+<body>
+  <script>  //스위치 케이스 브레이크 디폴트
+    var 직급 = window.prompt("직급을 입력하세요. 부장/ 차장/ 과장/ 대리/ 사원")
+    switch(직급){
+      case "부장": document.write("부장의 급여는 <i><strong>n00만원</strong></i> 입니다."); break;
+      case "차장": document.write("차장의 급여는 <i><strong>n00만원</strong></i> 입니다."); break;
+      case "과장": document.write("과장의 급여는 <i><strong>n00만원</strong></i> 입니다."); break;
+      case "대리": document.write("대리의 급여는 <i><strong>n00만원</strong></i> 입니다."); break;
+      case "사원": document.write("사원의 급여는 <i><strong>n00만원</strong></i> 입니다."); break;
+      default :alert("잘못 입력하셨습니다.") 
+    }
+  </script>
+</body>
+</html>
