@@ -6,6 +6,10 @@
 
 body{
     background-color: #1f1f1f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .calculator{
@@ -25,18 +29,18 @@ body{
 .calculator form input{
     border: 2px solid #333;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 19px;
 }
 
-.calculator form input :hover{
+.calculator form input :hover {
     box-shadow: 1px 1px 2px #333;
 }
 
 .calculator form .clear{
-    background-color: ed #ed4848;
+    background-color: #ed4848;
 }
 
-.calculator form .operatpr{
+.calculator form .operator{
     background-color: orange;
 }
 
@@ -46,6 +50,9 @@ body{
 
 .calculator form input[type="text"]{
     grid-column: span 4;
+    text-align: right;
+    padding: 0 10px;
+    color: #000;
 }
 
 .calculator form .clear{

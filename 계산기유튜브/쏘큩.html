@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cute Calculator</title>
+    <link rel="stylesheet" href="cuteCalculator.css">
+    <style>
+        .calculator {
+            border-color: pink;
+            background-color: lavender;
+        }
+
+        .calculator form input {
+            color: purple;
+        }
+
+        .calculator form input.operator {
+            background-color: aqua;
+        }
+
+        .calculator form input:hover {
+            box-shadow: 1px 1px 2px #333;
+        }
+
+        .calculator form input:active {
+            transform: scale(0.95);
+        }
+    </style>
+    <script>
+        function calculate() {
+            try {
+                const result = eval(document.forms.output.value);
+                document.forms.output.value = result;
+            } catch (error) {
+                document.forms.output.value = "Error";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="calculator">
+        <form name="forms">
+            <input type="text" name="output" readonly>
+            <input type="button" class="clear" name="C" onclick="document.forms.output.value=''">
+            <input type="button" class="operator" name="/" onclick="document.forms.output.value+='/'">
+            <input type="button" name="1" onclick="document.forms.output.value+='1'">
+            <input type="button" name="2" onclick="document.forms.output.value+='2'">
+            <input type="button" name="3" onclick="document.forms.output.value+='3'">
+            <input type="button" class="operator" name="*" onclick="document.forms.output.value+='*'">
+            <input type="button" name="4" onclick="document.forms.output.value+='4'">
+            <input type="button" name="5" onclick="document.forms.output.value+='5'">
+            <input type="button" name="6" onclick="document.forms.output.value+='6'">
+            <input type="button" class="operator" name="+" onclick="document.forms.output.value+='+'">
+            <input type="button" name="7" onclick="document.forms.output.value+='7'">
+            <input type="button" name="8" onclick="document.forms.output.value+='8'">
+            <input type="button" name="9" onclick="document.forms.output.value+='9'">
+            <input type="button" class="operator" name="-" onclick="document.forms.output.value+='-'">
+            <input type="button" class="dot" name="." onclick="document.forms.output.value+='.'">
+            <input type="button" name="0" onclick="document.forms.output.value += '0'">
+            <input type="button" class="result" name="=" onclick="calculate()">
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+h1 {
+    text-align: center;
+}
+
+#todoForm {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    
+}
+
+#todoInput {
+    width: 300px;
+    padding: 5px;
+    margin-right: 10px;
+    border-style: inset;
+}
+
+#todoInput:hover{
+    background-color: rgb(255, 237, 240);}
+
+#todoList {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    vertical-align: left;
+}
+
+.deleteBtn {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    border-style: outset;
+}
+
+button {
+    background-color: rgb(220, 220, 220);
+    border-style: outset;
+    font-size: bold;
+
+}
+
+button:hover {
+    background-color: rgb(205, 205, 255);
+}
