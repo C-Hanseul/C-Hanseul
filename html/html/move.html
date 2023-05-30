@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹 페이지 이동</title>
+</head>
+<body>
+    <h3>외부 사이트,내부 사이트 페이지 이동</h3>
+    <ol>
+        <li>
+            <a href="https://www.naver.com/" target="_self">네이버 페이지 이동</a> <!--현재-->
+        </li>
+        <li>
+            <a href="https://www.naver.com/" target="_blank">네이버 페이지 이동</a> <!--새로-->
+        </li>
+        <li>
+            <a href="http://127.0.0.1:5500/html/paragraph.html">내가 만든 p페이지 이동</a>
+        </li>
+    </ol>
+
+    <h3>동일 페이지 이동(책갈피)</h3>
+    <div id="back">
+        <a href="#apple">apple</a>
+        <a href="#banana">banana</a>
+        <a href="#melon">melon</a>
+    </div>
+    <div style="margin-top: 800px"; id="apple">첫 번째 - apple</div>
+    <a href="#back">되돌아가기 [홈]</a>
+    <div style="margin-top: 1000px"; id="banana">두 번째 - banana</div>
+    <a href="#back">되돌아가기 [홈]</a>
+    <div style="margin-top: 1500px"; id="melon">세 번째 - melon</div>
+    <a href="#back">되돌아가기 [홈]</a>
+</body>
+</html>
