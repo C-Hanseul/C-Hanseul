@@ -60,7 +60,32 @@
                     <input type="reset" value="취소">
                 </div>
             </ul>
-        </fieldset>
-    </form>
+        </fieldset><br><br><br><br><br><br>
+
+
+
+    <h1>프론트엔드 개발자 지원서</h1>
+    <fieldset style="width: 300px;">
+        <legend><b>개인정보</b><br></legend>
+        <label for="name">이름</label>
+        <input id="name" type="text" placeholder="공백없이 입력하세요."><br>
+        <label for="phone">전화번호</label>
+        <input id="phone" type="text">
+    </fieldset>
+    
+    <br>
+    <fieldset style="width: 300px;">
+        <legend></label><b>지원분야</b></legend>
+        <input type="radio" value="웹퍼블리싱" name="sort" checked>웹퍼블리싱<br>
+        <input type="radio" value="웹 어플리케이션 개발" name="sort">웹 어플리케이션 개발<br>
+        <input type="radio" value="개발 환경 개선" name="sort">개발 환경 개선<br>
+    </fieldset><br>
+    
+    <fieldset style="width: 300px;">
+        <legend><b>지원동기</b></legend>
+        <textarea name="지원동기" id="reason" cols="35" rows="5" placeholder="본사 지원동기를 간략하게 써주세요."></textarea><br>
+        <input type="button" value="접수하기">
+        <input type="reset" value="취소하기">
+    </fieldset>
 </body>
 </html>
