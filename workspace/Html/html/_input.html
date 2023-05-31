@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form 예제입니다</title>
+    <style>
+		fieldset {  width: 500px; }
+		fieldset legend {  font-weight:bold;  }
+		li { list-style:none; margin: 10px;}
+		label {  width:80px;  float:left; }
+		div { width:500px; text-align: center; margin-top: 10px; }
+	</style>
+</head>
+<body>
+    <form action="서버주소" method="get">
+    <span>아이디</span>
+    <input type="text" name="uid"><br><br>
+    <span>비밀번호</span>
+    <input type="password" name="upwd"><br><br>
+    <input type="submit" value="전송">
+    <input type="reset" value="취소">
+    </form><br><br>
+    <form action="서버주소(url)" method="get">
+        <fieldset>
+            <legend><b>배송정보</b></legend>
+            <ul>
+                <li>
+                    <label>주문상품</label>
+                    <input id="prod" type="text" name="prod" value="상품용3kg" readonly>
+                </li>
+                <li>
+                    <label for="uname">이름</label>
+                    <input id="uname" type="text" name="uname">
+                </li>
+                <li>
+                    <label for="addr">배송주소</label>
+                    <input id="addr" type="text" name="addr" size="40">
+                </li>
+                <li>
+                    <label for="email">이메일</label>
+                    <input id="email" type="text" name="email">
+                </li>
+                <li>
+                    <label for="phone">연락처</label>
+                    <input id="phone" type="text" name="phone" size="40" placeholder="하이픈(-)을 제외하고 입력하세요. 01012345678">
+                </li>
+                <li>
+                    <label for="d-day">배송지정</label>
+                    <input id="d-day" type="date"name="d-day">
+                    <small>(주문일로부터 최소 3일 후)</small>
+                </li>
+                <li>
+                    <label for="memo">메모</label>
+                    <textarea id="memo" name="memo" cols="40" rows="4"></textarea>
+                </li>
+                <div>
+                    <input type="submit" value="주문">
+                    <input type="reset" value="취소">
+                </div>
+            </ul>
+        </fieldset>
+    </form>
+</body>
+</html>
